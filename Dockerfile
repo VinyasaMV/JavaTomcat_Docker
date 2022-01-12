@@ -1,3 +1,3 @@
 From tomcat:8.0
 
-RUN cp **/*.war /usr/local/tomcat/webapps/
+RUN cp -a **/*.war /usr/local/tomcat/webapps/
