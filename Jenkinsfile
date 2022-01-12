@@ -14,7 +14,7 @@ pipeline {
         }
         stage('Create the Docker image out of generted War file'){
             steps{
-                sh 'docker build . -t tomcat_sample_java:${env.BUILD_NUMBER}"'
+                sh "docker build . -t tomcat_sample_java:${env.BUILD_ID}"
 
             }
             
