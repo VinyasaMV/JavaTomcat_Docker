@@ -12,9 +12,9 @@ pipeline {
                 }
             }
         }
-        stage('Deploy in Staging Environment'){
+        stage('Create the Docker image out of generted War file'){
             steps{
-                build job: 'Deploy_To_Tomcat_Servers'
+                sh 'docker build . -t tomcat_sample_java:${env.BUILD_NUMBER}"'
 
             }
             
